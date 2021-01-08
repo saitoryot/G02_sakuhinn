@@ -37,6 +37,19 @@
 #define FONT_INSTALL_ERR_TITLE	TEXT("フォントインストールエラー")
 #define FONT_CREATE_ERR_TITLE	TEXT("フォント作成エラー")
 
+//バーの下からの高さ
+#define BAR_UNDER_HEIGHT 100
+
+//ブロック数
+#define BLOCK_TATE_MAX 6
+#define BLOCK_YOKO_MAX 10
+
+//ブロック下の位置
+#define BLOCK_UNDER_HEIGHT	(GAME_HEIGHT - BAR_UNDER_HEIGHT - 200)
+
+#define BLOCK_WIDTH		(GAME_WIDTH / BLOCK_YOKO_MAX)						//ブロックの幅
+#define BLOCK_HEIGHT	(BLOCK_UNDER_HEIGHT / BLOCK_TATE_MAX)				//ブロックの高さ
+
 //########## 列挙型 ##########
 enum GAME_SCENE {
 	GAME_SCENE_START,
@@ -170,7 +183,7 @@ VOID MY_START(VOID)
 VOID MY_START_PROC(VOID)
 {
 	//スペースキーを押したら、プレイシーンへ移動する
-	if (MY_KEY_PUSH(KEY_INPUT_SPACE) == TRUE)
+	if (MY_KEY_PUSH(KEY_INPUT_RETURN) == TRUE)
 	{
 		//プレイ画面を初期化
 		MY_PLAY_INIT();
