@@ -10,7 +10,7 @@
 #define GAME_COLOR			32	//画面のカラービット
 
 #define GAME_WINDOW_BAR		0				//タイトルバーはデフォルトにする
-#define GAME_WINDOW_NAME	"GAME TITLE"	//ウィンドウのタイトル
+#define GAME_WINDOW_NAME	"ブロック崩し"	//ウィンドウのタイトル
 #define GAME_FPS			60				//FPSの数値	
 
 #define GAME_ICON_ID		333				//ゲームのアイコンID
@@ -21,6 +21,8 @@
 
 //キーボードの種類
 #define KEY_MAX				256
+
+//#define STR_GAME_OVER		TEXT("GAME OVER")
 
 //エラーメッセージ
 #define IMAGE_LOAD_ERR_TITLE	TEXT("画像読み込みエラー")
@@ -761,6 +763,10 @@ VOID MY_PLAY_DRAW(VOID)
 
 	//ゲームスコア描画
 	DrawFormatString(0, 20, GetColor(255, 255, 255), "SCORE:%05d", GameTokuten);
+
+	//DrawFormatString(352, 300, GetColor(255, 0, 0), "GameOver", GameTokuten);
+    
+
 
 	//スタートしていないとき
 	if (IsStart == FALSE)
