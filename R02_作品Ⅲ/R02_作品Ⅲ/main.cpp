@@ -764,7 +764,7 @@ VOID MY_PLAY_DRAW(VOID)
 	//ゲームスコア描画
 	DrawFormatString(0, 20, GetColor(255, 255, 255), "SCORE:%05d", GameTokuten);
 
-	//DrawFormatString(352, 300, GetColor(255, 0, 0), "GameOver", GameTokuten);
+	DrawFormatString(352, 300, GetColor(255, 0, 0), "GameOver", GameTokuten);
     
 
 
