@@ -768,6 +768,7 @@ VOID MY_PLAY_DRAW(VOID)
     
 
 
+
 	//スタートしていないとき
 	if (IsStart == FALSE)
 	{
